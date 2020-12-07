@@ -17,7 +17,6 @@ RUN cd /opt \
     && make RetroFW_defconfig BR2_EXTERNAL=retrofw \
     && export FORCE_UNSAFE_CONFIGURE=1 \
     && make \
-    && mkdir /opt/retrofwtools \
     # put toolchain into path
     && echo "export PATH=/opt/buildroot/output/host/mipsel-RetroFW-linux-uclibc/sysroot/usr/bin:\$PATH" > /etc/profile.d/retrofwtools.sh \
     && echo "export PATH=/opt/buildroot/output/host/bin:\$PATH" >> /etc/profile.d/retrofwtools.sh \
